@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2009-2020 WACAI,Inc.All Rights Reserved.
+ * Copyright (c) 2009-2020 FUDAI,Inc.All Rights Reserved.
  *
  * @fileName: InductionAlgorithm
  * @package: com.leet.code
@@ -9,16 +9,12 @@
 package com.leet.code;
 
 
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.deploy.util.StringUtils;
-import com.sun.tools.javac.util.ArrayUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 import java.util.Stack;
 
 /**
