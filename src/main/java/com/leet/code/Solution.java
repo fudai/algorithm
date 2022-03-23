@@ -47,6 +47,7 @@ public class Solution {
             l1 = l1.next;
             l2 = l2.next;
         }
+        //l1有剩余
         while (l1 != null) {
             int c = l1.val + add;
             int c1 = c % 10;
@@ -55,6 +56,7 @@ public class Solution {
             l1 = l1.next;
             add = c / 10;
         }
+        //l2有剩余
         while (l2 != null) {
             int c = l2.val + add;
             int c1 = c % 10;
@@ -63,6 +65,7 @@ public class Solution {
             l2 = l2.next;
             add = c / 10;
         }
+        //最后有进位
         if (add != 0) {
             temp.next = new ListNode(add);
         }
@@ -542,6 +545,14 @@ public class Solution {
     /**
      * 电话号码的字母组合
      *
+     * 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+     *
+     * 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+     *
      * @param digits
      * @return
      */
@@ -927,6 +938,12 @@ public class Solution {
     /**
      * 实现 strStr()
      *
+     * 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回  -1 。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/implement-strstr
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+     *
      * @param haystack
      * @param needle
      * @return
@@ -1029,6 +1046,13 @@ public class Solution {
     /**
      * 串联所有单词的子串
      *
+     * 给定一个字符串 s 和一些 长度相同 的单词 words 。找出 s 中恰好可以由 words 中所有单词串联形成的子串的起始位置。
+     *
+     * 注意子串要与 words 中的单词完全匹配，中间不能有其他字符 ，但不需要考虑 words 中单词串联的顺序。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      * @param s
      * @param words
      * @return
@@ -1053,9 +1077,7 @@ public class Solution {
                 left++;
             }
         }
-
         return result;
-
     }
 
     private boolean isMatch(String sub, HashMap<String, Integer> map, int length) {
@@ -1084,6 +1106,24 @@ public class Solution {
 
     /**
      * 下一个排列
+     *
+     * 整数数组的一个 排列  就是将其所有成员以序列或线性顺序排列。
+     *
+     * 例如，arr = [1,2,3] ，以下这些都可以视作 arr 的排列：[1,2,3]、[1,3,2]、[3,1,2]、[2,3,1] 。
+     * 整数数组的 下一个排列 是指其整数的下一个字典序更大的排列。更正式地，如果数组的所有排列根据其字典顺序从小到大排列在一个容器中，那么数组的 下一个排列 就是在这个有序容器中排在它后面的那个排列。如果不存在下一个更大的排列，那么这个数组必须重排为字典序最小的排列（即，其元素按升序排列）。
+     *
+     * 例如，arr = [1,2,3] 的下一个排列是 [1,3,2] 。
+     * 类似地，arr = [2,3,1] 的下一个排列是 [3,1,2] 。
+     * 而 arr = [3,2,1] 的下一个排列是 [1,2,3] ，因为 [3,2,1] 不存在一个字典序更大的排列。
+     * 给你一个整数数组 nums ，找出 nums 的下一个排列。
+     *
+     * 必须 原地 修改，只允许使用额外常数空间。
+     *
+     *
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/next-permutation
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      *
      * @param nums
      */

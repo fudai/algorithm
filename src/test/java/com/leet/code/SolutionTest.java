@@ -152,7 +152,7 @@ public class SolutionTest {
 
     @Test
     public void divide() {
-        System.out.println(solution.divide(2147483647,2));
+        System.out.println(solution.divide(8,2));
     }
 
     @Test
